@@ -1,0 +1,19 @@
+{
+	"name": "BlackScreen",
+	"version": "1.2.8",
+	"ignore": [
+		"**/.*",
+		"tpl",
+		"static",
+		"install-script",
+		"utils",
+		"public/index.php",
+		"Core"
+	],
+	"dependencies": {
+		"jquery": "3"
+	},
+	"devDependencies": {
+
+	}
+}

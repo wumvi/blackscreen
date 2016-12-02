@@ -1,0 +1,73 @@
+{% import "component/wrapper.twig" as bgScreen %}
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="res/bower_package/jquery/dist/jquery.js"></script>
+    <script src="res/js/min/BlackScreen.js"></script>
+
+    <style>
+        .show-btn{
+            width: 300px;
+            height: 80px;
+            line-height: 80px;
+            font-size: 30px;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12);
+            background: #f9f9f9;
+            color: #696969;
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .show-btn:hover{
+            color: #393939;
+        }
+
+        .show-btn:active{
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.22);
+            margin-top: 1px;
+        }
+
+        .btn-nest{
+            text-align: center;
+            margin-top: 150px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="res/css/bin/blackBg.css"/>
+</head>
+<body>
+
+{% wrap bgScreen wrapper %}
+
+{% endwrap %}
+
+<div class="btn-nest">
+    <a href="#" class="show-btn show__js">Click to show</a>
+</div>
+
+<script>
+
+    var $root = jQuery(BlackScreen.MAIN_CLASS + ':first');
+    //console.log('$root', $root);
+    var blackScreenOptions = new BlackScreenOption();
+    blackScreenOptions.setRoot($root);
+    blackScreenOptions.setOnShowCallback(function(){
+        //jQuery('#youtube').attr('src', 'https://www.youtube.com/embed/ZM4veycUxIg');
+    });
+
+    blackScreenOptions.setOnHideCallback(function(){
+        jQuery('#youtube').attr('src', '');
+    });
+    var blackScreen = new BlackScreen(blackScreenOptions);
+
+    jQuery('.show__js').click(function(){
+        //console.log('btn click');
+        blackScreen.show();
+        return false;
+    });
+
+</script>
+</body>
+</html>

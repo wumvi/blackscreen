@@ -1,0 +1,20 @@
+{% spaceless %}
+	{% macro wrapper(content) %}
+		<div class="dark-box bsr-black-screen__js">
+			<div class="table-box">
+				<div class="table-box-row">
+					<div class="table-box-cell">
+						<div class="nest-content-box nest-size nest-content-box__js">
+							{{ content | raw }}
+
+							<div class="side-panel">
+								<a class="close-btn close-btn__js" href="#close"></a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endmacro %}
+{% endspaceless %}

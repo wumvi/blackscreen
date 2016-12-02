@@ -1,0 +1,8 @@
+/nbproject
+/.idea
+/node_modules
+/vendor
+/test/
+/data/
+/node_modules/
+/public/res/bower_package/

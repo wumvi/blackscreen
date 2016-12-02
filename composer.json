@@ -1,0 +1,22 @@
+{
+  "name": "wumvi/blackscreen",
+  "version": "1.2.9",
+  "description": "twig wrapper",
+  "license": "MIT",
+  "require": {
+    "twig/twig": "@stable"
+  },
+  "authors": [
+    {
+      "name": "Kozlenko Vitaliy",
+      "email": "vk@wumvi.com",
+      "homepage": "https://wumvi.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Component\\BlackScreen\\": "core"
+    }
+  }
+}
